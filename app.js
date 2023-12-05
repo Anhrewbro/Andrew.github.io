@@ -1,3 +1,24 @@
+
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyA3O_OQ7cNnw4pzsGMa5Ho3P6dnxGSmozw",
+	authDomain: "webapp-72057.firebaseapp.com",
+	databaseURL: "https://webapp-72057-default-rtdb.europe-west1.firebasedatabase.app",
+	projectId: "webapp-72057",
+	storageBucket: "webapp-72057.appspot.com",
+	messagingSenderId: "857969097256",
+	appId: "1:857969097256:web:d556c23c52a26af3ab531d"
+};
+
+
+
+
+firebase.initializeApp(firebaseConfig);
+
+firebase.database().ref('cons');
+
+
 let tg = window.Telegram.WebApp;
 
 
@@ -9,11 +30,7 @@ tg.MainButton.color = '#2cab37';
 let item = "";
 
 let btn1 = document.getElementById("btn1");
-let btn2 = document.getElementById("btn2");
-let btn3 = document.getElementById("btn3");
-let btn4 = document.getElementById("btn4");
-let btn5 = document.getElementById("btn5");
-let btn6 = document.getElementById("btn6");
+
 
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
@@ -26,60 +43,7 @@ btn1.addEventListener("click", function(){
 	}
 });
 
-btn2.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы выбрали товар 2!");
-		item = "2";
-		tg.MainButton.show();
-	}
-});
 
-btn3.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы выбрали товар 3!");
-		item = "3";
-		tg.MainButton.show();
-	}
-});
-
-btn4.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы выбрали товар 4!");
-		item = "4";
-		tg.MainButton.show();
-	}
-});
-
-btn5.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы выбрали товар 5!");
-		item = "5";
-		tg.MainButton.show();
-	}
-});
-
-btn6.addEventListener("click", function(){
-	if (tg.MainButton.isVisible) {
-		tg.MainButton.hide();
-	}
-	else {
-		tg.MainButton.setText("Вы выбрали товар 6!");
-		item = "6";
-		tg.MainButton.show();
-	}
-});
 
 
 
