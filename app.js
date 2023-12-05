@@ -4,6 +4,7 @@
 const firebaseConfig = {
     apiKey: "AIzaSyB7QHUjDXThzgQdx71y7cLD1WB1XyJHBFM",
     authDomain: "web-bot-262c0.firebaseapp.com",
+	databaseURL: "https://web-bot-262c0-default-rtdb.europe-west1.firebasedatabase.app/",
     projectId: "web-bot-262c0",
     storageBucket: "web-bot-262c0.appspot.com",
     messagingSenderId: "784552061695",
