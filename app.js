@@ -2,20 +2,21 @@
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyA3O_OQ7cNnw4pzsGMa5Ho3P6dnxGSmozw",
-	authDomain: "webapp-72057.firebaseapp.com",
-	databaseURL: "https://webapp-72057-default-rtdb.europe-west1.firebasedatabase.app",
-	projectId: "webapp-72057",
-	storageBucket: "webapp-72057.appspot.com",
-	messagingSenderId: "857969097256",
-	appId: "1:857969097256:web:d556c23c52a26af3ab531d"
+    apiKey: "AIzaSyB7QHUjDXThzgQdx71y7cLD1WB1XyJHBFM",
+    authDomain: "web-bot-262c0.firebaseapp.com",
+    projectId: "web-bot-262c0",
+    storageBucket: "web-bot-262c0.appspot.com",
+    messagingSenderId: "784552061695",
+    appId: "1:784552061695:web:243dcce42644e5d424faca",
+    measurementId: "G-0EGN5SPRF2"
 };
 
 
 
 
-firebase.initializeApp(firebaseConfig);
+const db = firebase.initializeApp(firebaseConfig);
 
+db.database().ref('cons');
 firebase.database().ref('cons');
 
 
