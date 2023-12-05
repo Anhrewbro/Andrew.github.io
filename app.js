@@ -15,10 +15,9 @@ const firebaseConfig = {
 
 
 
-const db = firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-db.database().ref('cons');
-firebase.database().ref('cons');
+
 
 
 let tg = window.Telegram.WebApp;
