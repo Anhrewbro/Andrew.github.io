@@ -92,8 +92,20 @@ let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-p.innerText = `${initData.data}
-${initData.data}`;
+
+const productName = document.getElementById('productName');
+const productPrice = document.getElementById('productPrice');
+
+// Вставка даних з Python у HTML
+const dataName = "{{ data_list['name'] }}";
+const dataPrice = "{{ data_list['price'] }}";
+
+productName.textContent = dataName;
+productPrice.textContent = dataPrice;
+
+
+p.innerText = `${tg.initData.data.first_name}
+${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
 
