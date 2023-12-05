@@ -97,8 +97,8 @@ const productName = document.getElementById('productName');
 const productPrice = document.getElementById('productPrice');
 
 // Вставка даних з Python у HTML
-const dataName = tg.initData.data_list;
-const dataPrice = "{{ data_list['price'] }}";
+const dataName = tg.initDataUnsafe.data_list;
+const dataPrice = tg.initDataUnsafe;
 
 productName.textContent = dataName;
 productPrice.textContent = dataPrice;
