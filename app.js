@@ -1,27 +1,4 @@
-
-
-
-const firebaseConfig = {
-    apiKey: "AIzaSyB7QHUjDXThzgQdx71y7cLD1WB1XyJHBFM",
-    authDomain: "web-bot-262c0.firebaseapp.com",
-	databaseURL: "https://web-bot-262c0-default-rtdb.europe-west1.firebasedatabase.app/",
-    projectId: "web-bot-262c0",
-    storageBucket: "web-bot-262c0.appspot.com",
-    messagingSenderId: "784552061695",
-    appId: "1:784552061695:web:243dcce42644e5d424faca",
-    measurementId: "G-0EGN5SPRF2"
-};
-
-
-
-
-firebase.initializeApp(firebaseConfig);
-
-
-
-
 let tg = window.Telegram.WebApp;
-
 
 tg.expand();
 
@@ -31,21 +8,70 @@ tg.MainButton.color = '#2cab37';
 let item = "";
 
 let btn1 = document.getElementById("btn1");
-
+let btn2 = document.getElementById("btn2");
+let btn3 = document.getElementById("btn3");
+let btn4 = document.getElementById("btn4");
+let btn5 = document.getElementById("btn5");
+let btn6 = document.getElementById("btn6");
 
 btn1.addEventListener("click", function(){
 	if (tg.MainButton.isVisible) {
 		tg.MainButton.hide();
 	}
 	else {
-		tg.MainButton.setText("1");
+		tg.MainButton.setText("Вы выбрали товар 1!");
 		item = "1";
 		tg.MainButton.show();
 	}
 });
 
+btn2.addEventListener("click", function(){
+	console.log(tg.initDataUnsafe.user.id)
+});
 
+btn3.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 3!");
+		item = "3";
+		tg.MainButton.show();
+	}
+});
 
+btn4.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 4!");
+		item = "4";
+		tg.MainButton.show();
+	}
+});
+
+btn5.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 5!");
+		item = "5";
+		tg.MainButton.show();
+	}
+});
+
+btn6.addEventListener("click", function(){
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 6!");
+		item = "6";
+		tg.MainButton.show();
+	}
+});
 
 
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
@@ -53,26 +79,17 @@ Telegram.WebApp.onEvent("mainButtonClicked", function(){
 });
 
 
+
 let usercard = document.getElementById("usercard");
 
 let p = document.createElement("p");
 
-
-const productName = document.getElementById('productName');
-const productPrice = document.getElementById('productPrice');
-
-// Вставка даних з Python у HTML
-const dataName = tg.initDataUnsafe.data_list;
-const dataPrice = tg.initDataUnsafe;
-
-productName.textContent = dataName;
-productPrice.textContent = dataPrice;
-
-
-p.innerText = `${tg.initData.data.first_name}
+p.innerText = `${tg.initDataUnsafe.user.first_name}
 ${tg.initDataUnsafe.user.last_name}`;
 
 usercard.appendChild(p);
+
+
 
 
 
