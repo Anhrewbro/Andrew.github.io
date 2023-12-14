@@ -26,7 +26,14 @@ btn1.addEventListener("click", function(){
 });
 
 btn2.addEventListener("click", function(){
-	console.log(tg.initDataUnsafe.user.id)
+	if (tg.MainButton.isVisible) {
+		tg.MainButton.hide();
+	}
+	else {
+		tg.MainButton.setText("Вы выбрали товар 2!");
+		item = "2";
+		tg.MainButton.show();
+	}
 });
 
 btn3.addEventListener("click", function(){
@@ -77,7 +84,6 @@ btn6.addEventListener("click", function(){
 Telegram.WebApp.onEvent("mainButtonClicked", function(){
 	tg.sendData(item);
 });
-
 
 
 let usercard = document.getElementById("usercard");
